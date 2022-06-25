@@ -1,8 +1,30 @@
 version: "3.8"
 
+networks:
+  nats:
+    name: nats
+    driver: bridge
+
 services:
   nats:
     container_name: nats
     image: nats:2.8.4-alpine
     ports:
       - 4222:4222
+      - 6222:6222
+      - 8222:8222
+    networks:
+      - nats
+  # subscriber: 
+  #   container_name: subscriber
+  #   build: ./subscriber
+  #   ports:
+  #     - "8080:8080"
+  #   networks:
+  #     - nats
+  # publisher:
+  #   container_name: publisher
+  #   build: ./publisher
+  #   networks:
+  #     - nats-custom-network
+    

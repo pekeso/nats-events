@@ -1,7 +1,7 @@
 const { connect, StringCodec } = require('nats');
 
 const subject = 'my_subject';
-const servers = 'localhost:4222';
+const servers = 'nats://nats:4222';
 
 async function demo() {
   const codec = StringCodec();

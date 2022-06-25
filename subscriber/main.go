@@ -11,7 +11,7 @@ var subject = "my_subject"
 func main() {
     wait := make(chan bool)
 
-    nc, err := nats.Connect(nats.DefaultURL)
+    nc, err := nats.Connect("nats://nats:4222")
 
     if err != nil {
         fmt.Println(err)
