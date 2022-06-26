@@ -11,6 +11,8 @@ COPY *.go ./
 
 RUN go build -o /nats-subscribe
 
+ENV PORT 8080
+
 EXPOSE 8080
 
 CMD ["/nats-subscribe"]

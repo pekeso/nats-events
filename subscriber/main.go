@@ -24,5 +24,11 @@ func main() {
 
     fmt.Println("Subscribed to", subject)
 
+    // port := os.Getenv("PORT")
+    // if port == "" {
+    //         port = "8080"
+    // }
+    // log.Fatal(http.ListenAndServe(fmt.Sprintf(":%s", port), nil))
+
     <-wait
 }
