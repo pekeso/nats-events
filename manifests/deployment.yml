@@ -5,12 +5,12 @@ metadata:
 spec:
   replicas: 1
   strategy: {}
-  selector: 
+  selector:
     matchLabels:
       app: nats
   template:
     metadata:
-      labels: 
+      labels:
         app: nats
     spec:
       containers:
